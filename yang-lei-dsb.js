@@ -1,11 +1,6 @@
-addEventListener("fetch", (event) => { 
-  event.respondWith( 
-    new Response(
-      "Hello Deno Deploy [yang-lei-dsb]", 
-      { 
-        status: 200, 
-        headers: { server: "denosr", "content-type": "text/plain", }, 
-      },
-    ), 
-  ); 
+addEventListener("fetch", (event) => {
+  const response = new Response("你懂我的意思吧 [yang-lei-dsb]", {
+    headers: { "content-type": "text/plain" },
+  });
+  event.respondWith(response);
 });
